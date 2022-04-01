@@ -1,7 +1,7 @@
 import * as React from "react"
 import {useEffect, useState} from "react";
 
-import {Helmet} from "react-helmet";
+import {Helmet} from 'react-helmet';
 
 import '../styles.scss';
 
@@ -24,7 +24,9 @@ const IndexPage = () => {
     return (
         <main>
             <Helmet>
+                <title>Google sheet example</title>
             </Helmet>
+
             <h1>Google sheet example</h1>
             <h2>{title}</h2>
             <hr/>
