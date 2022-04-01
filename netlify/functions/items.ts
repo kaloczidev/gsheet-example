@@ -10,10 +10,10 @@ const handler: Handler = async (event, context) => {
         const auth = process.env.ACCESS_TOKEN;
         const access = JSON.parse(auth);
         access.private_key = access.private_key.replace(/\\n/gm, '\n');
-
+        console.log(access);
         const gs = new Sheets(sheetID);
         await gs.authorizeJWT(access);
-        const table = await gs.tables("Sheet1!A:E");
+        const table = await gs.tables("Sheet1");
 
         return {
             statusCode: 200,
